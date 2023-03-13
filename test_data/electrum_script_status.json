@@ -1,0 +1,37 @@
+[
+    {
+        "input": [
+            {
+                "txid": "5aeab6d4c51cb9f7f808c3884410b4b3a6ec2ef0ab90d05af1411e5ef1264629",
+                "height": 2
+            }
+        ],
+        "expected": "beb13d2a759cf2f6e376338ced5f40c81e80929d8f4f51ca22e5c7d243f7fe25"
+    },
+    {
+        "input": [
+            {
+                "txid": "5aeab6d4c51cb9f7f808c3884410b4b3a6ec2ef0ab90d05af1411e5ef1264629",
+                "height": 2
+            },
+            {
+                "txid": "3774bced240ff74289b3d05f3d12467fd182744cd28cf7bce4f61648a9defaec",
+                "height": 0
+            }
+        ],
+        "expected": "5b7f40c0c8daa2db6457510b785a7373262845a7edb34c689ab7ab7bca9d92b2"
+    },
+    {
+        "input": [
+            {
+                "txid": "5aeab6d4c51cb9f7f808c3884410b4b3a6ec2ef0ab90d05af1411e5ef1264629",
+                "height": 2
+            },
+            {
+                "txid": "3774bced240ff74289b3d05f3d12467fd182744cd28cf7bce4f61648a9defaec",
+                "height": 103
+            }
+        ],
+        "expected": "89a73c3e525bb8a1a1313214d08b00b1095744f049ad60607ea4c241f6ec963c"
+    }
+]
