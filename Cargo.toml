@@ -1,7 +1,7 @@
 [package]
 name = "bitcoin-test-data"
 description = "Bitcoin test data such as blocks and transactions samples and test vectors"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2018"
 authors = ["Riccardo Casatta <riccardo@casatta.it>"]
 repository = "https://github.com/RCasatta/bitcoin-test-data"
@@ -12,8 +12,8 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
 
 [dev-dependencies]
 electrsd = { version = "0.23.3", features = ["bitcoind_23_0", "electrs_0_9_11"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

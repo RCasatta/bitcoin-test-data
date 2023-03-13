@@ -1,17 +1,7 @@
-use serde::{Deserialize, Serialize};
-
-use crate::TestData;
-
-#[derive(Serialize, Deserialize)]
-pub struct Tx {
-    txid: String,
-    height: i32,
-}
-
 const SCRIPT_STATUS: &str = include_str!("../test_data/electrum_script_status.json");
 
-pub fn script_status() -> Vec<TestData<Vec<Tx>, String>> {
-    serde_json::from_str(SCRIPT_STATUS).unwrap()
+pub fn script_status() -> &'static str {
+    SCRIPT_STATUS
 }
 
 #[cfg(test)]
@@ -25,10 +15,15 @@ mod tests {
         },
         ElectrsD,
     };
+    use serde::{Deserialize, Serialize};
 
-    use crate::TestData;
+    use crate::tests::TestData;
 
-    use super::Tx;
+    #[derive(Serialize, Deserialize)]
+    pub struct Tx {
+        txid: String,
+        height: i32,
+    }
 
     #[ignore]
     #[test]
